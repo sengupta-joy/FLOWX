@@ -1,4 +1,5 @@
 ﻿Imports System.Web.Mvc
+Imports Newtonsoft.Json
 
 Namespace Controllers
     Public Class loginController
@@ -10,7 +11,7 @@ Namespace Controllers
         End Function
 
         ' GET: login/Details/5
-        Function Details(ByVal id As String, password As String) As Dictionary(Of String, String)
+        Function Details(ByVal id As String, password As String) As String
             Dim req As New Requester()
             Dim params As New Dictionary(Of String, String)
             Dim dic As New Dictionary(Of String, String)
@@ -35,10 +36,10 @@ Namespace Controllers
                 dic.Add("msg", "Server unavailiable")
             End If
 
-            Response.ContentType = "application/json; charset=utf-8"
+            Return JsonConvert.SerializeObject(dic, Formatting.Indented)
 
 
-            Return dic
+
         End Function
 
         ' GET: login/Create
