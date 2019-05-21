@@ -157,7 +157,7 @@
     <Compile Include="App_Code\AppUtil.vb" />
     <Compile Include="App_Code\Module1.vb" />
     <Compile Include="App_Code\Requester.vb" />
-    <Compile Include="App_Code\UserInfo.vb" />
+    <Compile Include="App_Code\LogedInUserInfo.vb" />
     <Compile Include="App_Start\BundleConfig.vb" />
     <Compile Include="App_Start\FilterConfig.vb" />
     <Compile Include="App_Start\RouteConfig.vb" />
@@ -484,6 +484,7 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
     <Content Include="Views\Shared\_LoginLayout.vbhtml" />
     <Content Include="Views\login\Index.vbhtml" />
+    <Content Include="Views\Shared\partial\_partialEmployee.vbhtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />

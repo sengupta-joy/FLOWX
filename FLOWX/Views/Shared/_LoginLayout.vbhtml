@@ -20,6 +20,8 @@ End Code
                 var uid = $("#txtUser").val();
                 var pass = $("#txtPass").val();
 
+                $("#lblMsg").text("waiting for server..");
+
                 $.ajax({
                     url: url,
                     data: { id: uid, password: pass },
@@ -28,6 +30,13 @@ End Code
                     contentType: 'application/json; charset=utf-8',
                     success: function (result) {
                         console.log(result);
+                        //if result = success, navigate home page
+                        //else display error message
+                        if (result.msg != "SUCCESS") {
+                            $("#lblMsg").text(result.msg);
+                        } else {
+                            $(location).attr("href", "home/index");
+                        }
                     },
                     error: function (error) {
                         console.log(error);
@@ -75,7 +84,7 @@ End Code
                 <div>
                     <Button ID="btnLogin" class='ghost-round full-width login-button'>Let me in</Button>
                 </div>
-                <div class='spacing'>
+                <div class='spacing' id="lblMsg">
                     @RenderBody()
                 </div>
             </div>

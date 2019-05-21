@@ -2,7 +2,7 @@
 
 
 <Serializable>
-Public Class UserInfo
+Public Class LogedInUserInfo
 
     Private _tok As String
     Private _id As String

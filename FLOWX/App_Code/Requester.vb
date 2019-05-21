@@ -23,7 +23,7 @@ Public Class Requester
         Dim resp As HttpWebResponse
         Dim responseFromServer = ""
         Dim url As String
-        Dim user As UserInfo = DirectCast(HttpContext.Current.Session(SESSION_USER), UserInfo)
+        Dim user As LogedInUserInfo = DirectCast(HttpContext.Current.Session(SESSION_USER), LogedInUserInfo)
         Dim ThisToken As Object
         Dim apiResp As APIResponse
 
@@ -84,7 +84,7 @@ Public Class Requester
         Dim resp As HttpWebResponse
         Dim responseFromServer = ""
         Dim url As String
-        Dim user As UserInfo = DirectCast(HttpContext.Current.Session(SESSION_USER), UserInfo)
+        Dim user As LogedInUserInfo = DirectCast(HttpContext.Current.Session(SESSION_USER), LogedInUserInfo)
         Dim ThisToken As Object
         Dim apiResp As APIResponse
 
@@ -146,7 +146,7 @@ Public Class Requester
         Dim reqString() As Byte
         Dim url As String
 
-        Dim user As UserInfo = DirectCast(HttpContext.Current.Session(SESSION_USER), UserInfo)
+        Dim user As LogedInUserInfo = DirectCast(HttpContext.Current.Session(SESSION_USER), LogedInUserInfo)
 
         If Not action = "" Then
             url = ServerPath + controller + "/" + action
