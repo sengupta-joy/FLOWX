@@ -155,6 +155,7 @@
   <ItemGroup>
     <Compile Include="App_Code\APIResponse.vb" />
     <Compile Include="App_Code\AppUtil.vb" />
+    <Compile Include="App_Code\CustomAuthorization.vb" />
     <Compile Include="App_Code\Module1.vb" />
     <Compile Include="App_Code\Requester.vb" />
     <Compile Include="App_Code\LogedInUserInfo.vb" />
@@ -165,6 +166,7 @@
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\MdlMenu.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -482,9 +484,11 @@
     <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+    <Content Include="Scripts\site.js" />
     <Content Include="Views\Shared\_LoginLayout.vbhtml" />
     <Content Include="Views\login\Index.vbhtml" />
     <Content Include="Views\Shared\partial\_partialEmployee.vbhtml" />
+    <Content Include="Views\Home\Index.vbhtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
@@ -506,16 +510,13 @@
     </Content>
     <Content Include="Content\Site.css" />
     <Content Include="Views\_ViewStart.vbhtml" />
-    <Content Include="Views\Home\About.vbhtml" />
-    <Content Include="Views\Home\Contact.vbhtml" />
-    <Content Include="Views\Home\Index.vbhtml" />
     <Content Include="Views\Shared\Error.vbhtml" />
     <Content Include="Views\Shared\_Layout.vbhtml" />
     <Content Include="Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
+    <Folder Include="App_Themes\Theme1\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

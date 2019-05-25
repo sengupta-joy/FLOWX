@@ -16,7 +16,7 @@ End Code
     <script type="text/javascript">
         $(document).ready(function () {
             $("#btnLogin").click(function () {
-                var url = "login/details";
+                var url = "/login/details";
                 var uid = $("#txtUser").val();
                 var pass = $("#txtPass").val();
 

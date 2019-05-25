@@ -26,9 +26,11 @@ Namespace Controllers
             If resp.Success Then
                 If resp.Response Is Nothing Then
                     dic.Add("token", "")
-                    dic.Add("msg", resp.Message)
-                End If
-                If Not resp.Response("Tocken").Equals("") Then
+                    dic.Add("msg", "Invalid credentials")
+                ElseIf resp.Response("Tocken") Is Nothing Then
+                    dic.Add("token", "")
+                    dic.Add("msg", "Invalid login")
+                ElseIf Not resp.Response("Tocken").Equals("") Then
                     Session(SESSION_USER) = New LogedInUserInfo(resp.Response)
                     dic.Add("token", resp.Response("Tocken"))
                     dic.Add("msg", "SUCCESS")
